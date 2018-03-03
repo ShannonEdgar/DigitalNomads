@@ -1,16 +1,160 @@
 <!DOCTYPE html>
-<html lang="en">
 
-<head>
+<html lang="en-us">
+
+  <head>
+
     <meta charset="UTF-8">
-    <title>Document</title>
+
+    <title>Digital Nomads</title>
+
+        <!-- LINK TO CLEAR GOES HERE -->
+
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+
+    <!-- Bootstrap -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  
+
+    <!-- LINK TO CSS GOES HERE -->
+
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <!-- LINK TO JAVASCRIPT GOES HERE -->
+
     <script src="assets/javascript/app.js"></script>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
 
-<body>
+    <!-- LINK TO FIREBASE GOES HERE -->
+
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+
+  </head>
+
+  <body>
+
+    <div class="container">
 
 
-</body>
+      <div class="jumbotron">
+
+        <h1 class="text-center">Welcome Nomads</h1><p class="text-center">Where are you today?</p>
+
+            <div class="panel-body">
+
+            <form role="form">
+
+                <div class="form-group">
+
+                  <label for="city-field">City:</label>
+
+                  <input class="form-control" id="city-input" type="text">
+
+                <button class="submit-btn" id="button" type="submit">Submit</button>
+
+                </div>
+               </div>  
+            </form>
+        </div>
+
+
+
+
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="assets/images/food.png" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Where to Eat</h5>
+    <p class="card-text">If needed</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">1st Result</li>
+    <li class="list-group-item">2nd Result</li>
+    <li class="list-group-item">3rd Result</li>
+    <li class="list-group-item">4th Result</li>
+    <li class="list-group-item">5th Result</li>
+  </ul>
+</div>
+
+
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="assets/images/food.png" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Co-Working Spaces</h5>
+    <p class="card-text">If needed</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">1st Result</li>
+    <li class="list-group-item">2nd Result</li>
+    <li class="list-group-item">3rd Result</li>
+    <li class="list-group-item">4th Result</li>
+    <li class="list-group-item">5th Result</li>
+  </ul>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="assets/images/food.png" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Local Bike Share</h5>
+    <p class="card-text">If needed</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">1st Result</li>
+    <li class="list-group-item">2nd Result</li>
+    <li class="list-group-item">3rd Result</li>
+    <li class="list-group-item">4th Result</li>
+    <li class="list-group-item">5th Result</li>
+  </ul>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="assets/images/food.png" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Local Weather</h5>
+    <p class="card-text">If needed</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">1st Result</li>
+    <li class="list-group-item">2nd Result</li>
+    <li class="list-group-item">3rd Result</li>
+    <li class="list-group-item">4th Result</li>
+    <li class="list-group-item">5th Result</li>
+  </ul>
+</div>
+
+
+<!--  <div class="container2">
+    <h3></h3>
+    <p></p>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Where to Eat</th>
+          <th>Co-Working Spaces</th>
+          <th>Bike Share</th>
+          <th>Local Weather</th>
+        </tr>
+      </thead>
+      <tbody id="tbody">
+        <tr>
+          <td id='eat-results'></td>
+          <td id='cowork-results'></td>
+          <td id='bike-results'></td>
+          <td id='weather-results'></td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div><br><br><br>     
+ -->
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script type="text/javascript" src="employee.js"></script>
+
+  </body>
 
 </html>

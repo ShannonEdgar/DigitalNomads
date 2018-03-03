@@ -1,0 +1,27 @@
+ .container2{
+    margin: 30px;
+    width: 100%;
+    color: #606060;
+    max-width: 1100px;
+ }
+
+ .col-lg-12{
+  color: #606060;
+ }
+
+ form {
+  margin: 0 auto;
+  width: 400px;
+}
+
+.card-img-top{
+width: 18rem;
+
+}
+
+.card{
+	display: inline-block;
+	margin: 30px;
+	align-content: center;
+
+}
