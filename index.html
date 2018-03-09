@@ -2,127 +2,133 @@
 
 <html lang="en-us">
 
-  <head>
+<head>
 
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
 
-    <title>Digital Nomads</title>
+  <title>Digital Nomads</title>
 
-        <!-- LINK TO CLEAR GOES HERE -->
+  <!-- LINK TO CLEAR GOES HERE -->
 
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 
-    <!-- Bootstrap -->
+  <!-- Bootstrap -->
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  
-
-    <!-- LINK TO CSS GOES HERE -->
-
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
-    <!-- LINK TO JAVASCRIPT GOES HERE -->
-
-    <script src="assets/javascript/app.js"></script>
-
-    <!-- LINK TO FIREBASE GOES HERE -->
-
-    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
-
-  </head>
-
-  <body>
-
-    <div class="container">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+    crossorigin="anonymous">
 
 
-      <div class="jumbotron">
+  <!-- LINK TO CSS GOES HERE -->
 
-        <h1 class="text-center">Welcome Nomads</h1><p class="text-center">Where are you today?</p>
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
-            <div class="panel-body">
+  <!-- LINK TO JAVASCRIPT GOES HERE -->
 
-            <form role="form">
+  <script src="assets/javascript/app.js"></script>
 
-                <div class="form-group">
+  <!-- LINK TO FIREBASE GOES HERE -->
 
-                  <label for="city-field">City:</label>
+  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
 
-                  <input class="form-control" id="city-input" type="text">
+  <!-- LINK TO GOOGLE MAPS GOES HERE -->
 
-                <button class="submit-btn" id="button" type="submit">Submit</button>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWzB5jMBONeG8GTNQixmSfV7u5tj4lEwo&libraries=places"></script>
 
-                </div>
-               </div>  
-            </form>
-        </div>
+</head>
 
+<body>
 
-
-
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="assets/images/food.png" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Where to Eat</h5>
-    <p class="card-text">If needed</p>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">1st Result</li>
-    <li class="list-group-item">2nd Result</li>
-    <li class="list-group-item">3rd Result</li>
-    <li class="list-group-item">4th Result</li>
-    <li class="list-group-item">5th Result</li>
-  </ul>
-</div>
+  <div class="container">
 
 
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="assets/images/food.png" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Co-Working Spaces</h5>
-    <p class="card-text">If needed</p>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">1st Result</li>
-    <li class="list-group-item">2nd Result</li>
-    <li class="list-group-item">3rd Result</li>
-    <li class="list-group-item">4th Result</li>
-    <li class="list-group-item">5th Result</li>
-  </ul>
-</div>
+    <div class="jumbotron">
 
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="assets/images/food.png" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Local Bike Share</h5>
-    <p class="card-text">If needed</p>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">1st Result</li>
-    <li class="list-group-item">2nd Result</li>
-    <li class="list-group-item">3rd Result</li>
-    <li class="list-group-item">4th Result</li>
-    <li class="list-group-item">5th Result</li>
-  </ul>
-</div>
+      <h1 class="text-center">Welcome Nomads</h1>
+      <p class="text-center">Where are you today?</p>
 
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="assets/images/food.png" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Local Weather</h5>
-    <p class="card-text">If needed</p>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">1st Result</li>
-    <li class="list-group-item">2nd Result</li>
-    <li class="list-group-item">3rd Result</li>
-    <li class="list-group-item">4th Result</li>
-    <li class="list-group-item">5th Result</li>
-  </ul>
-</div>
+      <div class="panel-body">
+
+        <form role="form">
+
+          <div class="form-group">
+
+            <label for="city-field">City:</label>
+
+            <input class="form-control" id="city-input" type="text">
+
+            <button class="submit-btn" id="button" type="submit">Submit</button>
+
+          </div>
+      </div>
+      </form>
+    </div>
 
 
-<!--  <div class="container2">
+
+
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="assets/images/food.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Where to Eat</h5>
+        <p class="card-text">If needed</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">1st Result</li>
+        <li class="list-group-item">2nd Result</li>
+        <li class="list-group-item">3rd Result</li>
+        <li class="list-group-item">4th Result</li>
+        <li class="list-group-item">5th Result</li>
+      </ul>
+    </div>
+
+
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="assets/images/food.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Co-Working Spaces</h5>
+        <p class="card-text">If needed</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">1st Result</li>
+        <li class="list-group-item">2nd Result</li>
+        <li class="list-group-item">3rd Result</li>
+        <li class="list-group-item">4th Result</li>
+        <li class="list-group-item">5th Result</li>
+      </ul>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="assets/images/food.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Local Bike Share</h5>
+        <p class="card-text">If needed</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">1st Result</li>
+        <li class="list-group-item">2nd Result</li>
+        <li class="list-group-item">3rd Result</li>
+        <li class="list-group-item">4th Result</li>
+        <li class="list-group-item">5th Result</li>
+      </ul>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="assets/images/food.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Local Weather</h5>
+        <p class="card-text">If needed</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">1st Result</li>
+        <li class="list-group-item">2nd Result</li>
+        <li class="list-group-item">3rd Result</li>
+        <li class="list-group-item">4th Result</li>
+        <li class="list-group-item">5th Result</li>
+      </ul>
+    </div>
+
+
+    <!--  <div class="container2">
     <h3></h3>
     <p></p>
     <table class="table">
@@ -153,12 +159,8 @@
 
 
     <script src="https://code.jquery.com/jquery.js"></script>
-<<<<<<< HEAD
-    <script type="text/javascript" src="employee.js"></script>
-=======
     <script type="text/javascript" src="assets/javascript/app.js"></script>
->>>>>>> e6978725fc152c552a0599864808e181a2e1f67f
 
-  </body>
+</body>
 
 </html>

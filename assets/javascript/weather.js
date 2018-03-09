@@ -1,23 +1,23 @@
 // This is our API key
-var APIKey = "166a433c57516f51dfab1f7edaed8413";
-var userCity = "Sacramento";
-var tempFahrenheit = "";
-var tempCelsius = "";
-var weatherDescription = "";
-var weatherCategory = "";
+var APIKey = '166a433c57516f51dfab1f7edaed8413';
+var userCity = 'Sacramento';
+var tempFahrenheit = '';
+var tempCelsius = '';
+var weatherDescription = '';
+var weatherCategory = '';
 
 // Here we are building the URL we need to query the database
 var queryURL =
-  "https://api.openweathermap.org/data/2.5/weather?" +
-  "q=" +
+  'https://api.openweathermap.org/data/2.5/weather?' +
+  'q=' +
   userCity +
-  "&appid=" +
+  '&appid=' +
   APIKey;
 
 // Here we run our AJAX call to the OpenWeatherMap API
 $.ajax({
   url: queryURL,
-  method: "GET",
+  method: 'GET'
 })
   // We store all of the retrieved data inside of an object called "response"
   .then(function(response) {
@@ -34,9 +34,9 @@ $.ajax({
     //  $(".temp").text("Temperature (F) " + response.main.temp);
 
     // Log the data in the console as well
-    console.log("Temperature (F): " + response.main.temp);
-    console.log("Description: " + response.weather[0].main);
-    console.log("Category: " + response.weather[0].description);
+    console.log('Temperature (F): ' + response.main.temp);
+    console.log('Description: ' + response.weather[0].main);
+    console.log('Category: ' + response.weather[0].description);
 
     tempFahrenheit = Math.floor(response.main.temp * 9 / 5 - 459.67);
     tempCelsius = Math.floor(response.main.temp - 273.15);
