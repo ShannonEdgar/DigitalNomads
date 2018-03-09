@@ -2,11 +2,11 @@
 
 <html lang="en-us">
 
-  <head>
+<head>
 
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
 
-    <title>Digital Nomads</title>
+  <title>Digital Nomads</title>
 
       <!-- LINK TO CLEAR GOES HERE -->
 
@@ -32,96 +32,124 @@
 
   </head>
 
-  <body>
-<div class="container2">
-  <img id="header-image" src="assets/images/header.png"></img>
+  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+
+</head>
+
+<body>
+  <div class="container2">
+    <img id="header-image" src="assets/images/header.png"></img>
 
 
 
-  <div class="container3">
+    <div class="container3">
 
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="assets/images/food.png" alt="Card image cap">
-      <div class="card-body">
-        <h3 class="card-title">Where to Eat</h3><br>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="assets/images/food.png" alt="Card image cap">
+        <div class="card-body">
+          <h3 class="card-title">Where to Eat</h3>
+          <br>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">1st Result</li>
+          <li class="list-group-sub">Secondary info</li>
+          <br>
+          <li class="list-group-item">2nd Result</li>
+          <li class="list-group-sub">Secondary info</li>
+          <br>
+          <li class="list-group-item">3rd Result</li>
+          <li class="list-group-sub">Secondary info</li>
+          <br>
+          <li class="list-group-item">4th Result</li>
+          <li class="list-group-sub">Secondary info</li>
+          <br>
+          <li class="list-group-item">5th Result</li>
+          <li class="list-group-sub">Secondary info</li>
+          <br>
+        </ul>
       </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">1st Result</li>
-        <li class="list-group-sub">Secondary info</li><br>
-        <li class="list-group-item">2nd Result</li>
-        <li class="list-group-sub">Secondary info</li><br>
-        <li class="list-group-item">3rd Result</li>
-        <li class="list-group-sub">Secondary info</li><br>
-        <li class="list-group-item">4th Result</li>
-        <li class="list-group-sub">Secondary info</li><br>
-        <li class="list-group-item">5th Result</li>
-        <li class="list-group-sub">Secondary info</li><br>
-      </ul>
-    </div>
 
 
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="assets/images/cowork.png" alt="Card image cap">
-      <div class="card-body">
-        <h3 class="card-title">Co-Working</h3><br>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="assets/images/cowork.png" alt="Card image cap">
+        <div class="card-body">
+          <h3 class="card-title">Co-Working</h3>
+          <br>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">1st Result</li>
+          <li class="list-group-sub">Secondary info</li>
+          <br>
+          <li class="list-group-item">2nd Result</li>
+          <li class="list-group-sub">Secondary info</li>
+          <br>
+          <li class="list-group-item">3rd Result</li>
+          <li class="list-group-sub">Secondary info</li>
+          <br>
+          <li class="list-group-item">4th Result</li>
+          <li class="list-group-sub">Secondary info</li>
+          <br>
+          <li class="list-group-item">5th Result</li>
+          <li class="list-group-sub">Secondary info</li>
+          <br>
+        </ul>
       </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">1st Result</li>
-        <li class="list-group-sub">Secondary info</li><br>
-        <li class="list-group-item">2nd Result</li>
-        <li class="list-group-sub">Secondary info</li><br>
-        <li class="list-group-item">3rd Result</li>
-        <li class="list-group-sub">Secondary info</li><br>
-        <li class="list-group-item">4th Result</li>
-        <li class="list-group-sub">Secondary info</li><br>
-        <li class="list-group-item">5th Result</li>
-        <li class="list-group-sub">Secondary info</li><br>
-      </ul>
-    </div>
 
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="assets/images/bike.png" alt="Card image cap">
-      <div class="card-body">
-        <h3 class="card-title">Bike Share</h3><br>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="assets/images/bike.png" alt="Card image cap">
+        <div class="card-body">
+          <h3 class="card-title">Bike Share</h3>
+          <br>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">1st Result</li>
+          <li class="list-group-sub">Secondary info</li>
+          <br>
+          <li class="list-group-item">2nd Result</li>
+          <li class="list-group-sub">Secondary info</li>
+          <br>
+          <li class="list-group-item">3rd Result</li>
+          <li class="list-group-sub">Secondary info</li>
+          <br>
+          <li class="list-group-item">4th Result</li>
+          <li class="list-group-sub">Secondary info</li>
+          <br>
+          <li class="list-group-item">5th Result</li>
+          <li class="list-group-sub">Secondary info</li>
+          <br>
+        </ul>
       </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">1st Result</li>
-        <li class="list-group-sub">Secondary info</li><br>
-        <li class="list-group-item">2nd Result</li>
-        <li class="list-group-sub">Secondary info</li><br>
-        <li class="list-group-item">3rd Result</li>
-        <li class="list-group-sub">Secondary info</li><br>
-        <li class="list-group-item">4th Result</li>
-        <li class="list-group-sub">Secondary info</li><br>
-        <li class="list-group-item">5th Result</li>
-        <li class="list-group-sub">Secondary info</li><br>
-      </ul>
-    </div>
 
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="assets/images/weather.png" alt="Card image cap">
-      <div class="card-body">
-        <h3 class="card-title">Local Weather</h3><br>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="assets/images/weather.png" alt="Card image cap">
+        <div class="card-body">
+          <h3 class="card-title">Local Weather</h3>
+          <br>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">1st Result</li>
+          <li class="list-group-sub">Secondary info</li>
+          <br>
+          <li class="list-group-item">2nd Result</li>
+          <li class="list-group-sub">Secondary info</li>
+          <br>
+          <li class="list-group-item">3rd Result</li>
+          <li class="list-group-sub">Secondary info</li>
+          <br>
+          <li class="list-group-item">4th Result</li>
+          <li class="list-group-sub">Secondary info</li>
+          <br>
+          <li class="list-group-item">5th Result</li>
+          <li class="list-group-sub">Secondary info</li>
+          <br>
+        </ul>
       </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">1st Result</li>
-        <li class="list-group-sub">Secondary info</li><br>
-        <li class="list-group-item">2nd Result</li>
-        <li class="list-group-sub">Secondary info</li><br>
-        <li class="list-group-item">3rd Result</li>
-        <li class="list-group-sub">Secondary info</li><br>
-        <li class="list-group-item">4th Result</li>
-        <li class="list-group-sub">Secondary info</li><br>
-        <li class="list-group-item">5th Result</li>
-        <li class="list-group-sub">Secondary info</li><br>
-      </ul>
     </div>
   </div>
-</div>
 
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script type="text/javascript" src="assets/javascript/app.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery.js"></script> -->
+  <script type="text/javascript" src="assets/javascript/app.js"></script>
 
-  </body>
+</body>
 
 </html>
