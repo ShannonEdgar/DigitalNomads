@@ -35,18 +35,18 @@ $(document).ready(function() {
       "https://maps.googleapis.com/maps/api/place/textsearch/json?query=restaurant+in+";
     var key = "AIzaSyBY3JtHC9_vtnbcRjse-wqSdzdpIr2Awak";
     var qUrlFood = proxy + urlFood + userCity + "&key=" + key;
-    console.log(qUrlFood);
-    console.log(userCity);
+    // console.log(qUrlFood);
+    // console.log(userCity);
     $.ajax({
       url: qUrlFood,
       method: "GET",
     })
       .done(function(foodData) {
-        console.log(foodData);
-        renderFood(foodData);
+        // console.log(foodData);
+        // renderFood(foodData);
       })
       .fail(function(error) {
-        console.log(error.code);
+        // console.log(error.code);
       });
   }
 
@@ -54,7 +54,7 @@ $(document).ready(function() {
     $(".food-text").empty();
     for (var i = 0; i < response.results.length; i++) {
       var nameFood = response.results[i].name;
-      console.log(nameFood);
+      // console.log(nameFood);
       var addressFood = response.results[i].formatted_address;
       var ratingFood = response.results[i].rating;
       var priceFood = response.results[i].price_level;
@@ -96,11 +96,11 @@ $(document).ready(function() {
       dataType: "json",
     })
       .done(function(coWorkersData) {
-        console.log(coWorkersData);
+        // console.log(coWorkersData);
         renderCoWorkers(coWorkersData);
       })
       .fail(function(error) {
-        console.log(error.code);
+        // console.log(error.code);
       });
   }
 
@@ -133,11 +133,11 @@ $(document).ready(function() {
       method: "GET",
     })
       .done(function(bikeData) {
-        console.log(bikeData);
+        // console.log(bikeData);
         renderBike(bikeData);
       })
       .fail(function(error) {
-        console.log(error.code);
+        // console.log(error.code);
       });
   }
 
@@ -191,9 +191,9 @@ $(document).ready(function() {
         console.log(response);
 
         // Log the data in the console as well
-        console.log("Temperature (F): " + response.main.temp);
-        console.log("Description: " + response.weather[0].main);
-        console.log("Category: " + response.weather[0].description);
+        // console.log("Temperature (F): " + response.main.temp);
+        // console.log("Description: " + response.weather[0].main);
+        // console.log("Category: " + response.weather[0].description);
 
         tempFahrenheit = Math.floor(response.main.temp * 9 / 5 - 459.67);
         tempCelsius = Math.floor(response.main.temp - 273.15);
