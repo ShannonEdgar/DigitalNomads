@@ -20,7 +20,7 @@ $.ajax({
     //data: YourData,
 }).done(function(response_food) {
     console.log(response_food);
-    renderFood(response_food)
+    renderFood(response_food);
 });
 
 function renderFood(data) {
@@ -35,12 +35,9 @@ function renderFood(data) {
         var id = data.businesses[i].id;
         var country = data.businesses[i].location.country;
         var yelp_image = data.businesses[i].image_url;
+        var price = data.businesses[i].price;
 
-
-
-
-
-        const proxyurl = "https://shielded-hamlet-43668.herokuapp.com/";
+        var proxyurl = "https://shielded-hamlet-43668.herokuapp.com/";
 
         var settings = {
             "async": true,
@@ -50,7 +47,7 @@ function renderFood(data) {
             "headers": {
                 "Authorization": "Bearer jtdOtf_Nw2aFD-KE_uZwAWGiQB2cNb9sApKVKV_3Bzbhlg0fjZ6lIqmNdziHcaBr47Hd9F3Myyt2eWEm_HmNmoRjMA2bc_znA3M1kYzLKcFxJJ-Mx9wLkmd68JswWnYx",
             }
-        }
+        };
         var review0;
         $.ajax(settings)
             .done(function(response_food) {
@@ -64,49 +61,20 @@ function renderFood(data) {
 
 
     }
-    for (let i = 1; i < 6; i++) {
+    for (var i = 1; i < 6; i++) {
         $(".food" + i).html(data.businesses[i].name);
-        console.log("food" + i)
+        console.log("food" + i);
         console.log(data.businesses[i].name);
+        console.log(data.businesses[i].price);
         var foodInfo = $("<li>").addClass("list-group-sub food" + i + "sub");
         var foodRating = foodInfo.html("<span>" + "Rating: " + data.businesses[i].rating + "</span>");
         var foodAdress = $(".food" + i + "sub").html("Address: " + data.businesses[i].location.address1 + ", " + data.businesses[i].location.city + ", " + data.businesses[i].location.zip_code);
+        var foodPrice = $(".food" + i + "sub").html("Price: " + data.businesses[i].price);
         $(".food" + i + "sub").append(foodRating);
         $(".food" + i + "sub").append(foodAdress);
+        $(".food" + i + "sub").append(foodPrice);
 
 
-        console.log(foodAdress)
-
-
-
-
-
-    }
-
-
-    var food_card = $("<div>").addClass("card trail");
-    // var food_card1 = $("<div>").addClass("card trail");
-    food_card.attr("uid", id).attr("city", data.businesses[i].location.city);
-    var food_card_name = $("<div>").addClass("card-header").html(name);
-    var food_card_review = $("<p>").addClass("card-header").html(review0);
-    var food_location = $("<div>").addClass("list-group yelp_clear_float col-sm-12").html(directions);
-    var food_image = $("<img>").addClass("list-group yelp_images yelp_title").attr("src", yelp_image);
-
-    // food_card1.append(food_card_name);
-    // food_card1.append(food_location);
-    food_card.append(food_image);
-    $("#food-result").append(food_card);
-    // $("yelp_info").append(food_card1);
-    food_card.append(food_card_name);
-    food_card.append(food_location);
-
-    if (rating) {
-        var yelp_stars_size = Math.max(0, (Math.min(6, rating))) * 16;
-        var yelp_rating_stars = $("<span>").html("<span style='width:" + yelp_stars_size + "px'></span>");
-        yelp_rating_stars.addClass("stars");
-        var yelp_rating = $("<li>").addClass("list-group-item trail_rating").html("<span>" + rating + "</span>");
-        yelp_rating.append(yelp_rating_stars);
-        food_card.append(yelp_rating);
-        food_card.append(food_card_review);
+        console.log(foodAdress);
     }
 }

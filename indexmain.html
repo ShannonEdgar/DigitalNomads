@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Digital Nomads</title>
+
+    <!-- LINK TO CLEAR GOES HERE -->
+
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+
+    <!-- Bootstrap -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+    <!-- LINK TO CSS GOES HERE -->
+
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <!-- LINK TO JAVASCRIPT GOES HERE -->
+
+
+    <script src="assets/javascript/app.js"></script>
+
+
+
+
+    <!-- LINK TO FIREBASE GOES HERE -->
+
+    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+</head>
+
+
+<body>
+
+    <div id="logo">
+        <img id="logo" src="assets/images/NomadLogo.png"></img>
+    </div>
+
+    <video id="videoID" autoplay loop src="assets/images/manhattan-sunset-from-brooklyn-bridge-park-video-id658919404.mp4">
+           </video>
+
+
+    <div class="container">
+
+        <h1 class="text-center">Welcome Nomad</h1>
+        <div class="input-group mb-3">
+            <input id="userCity" type="text" class="form-control" placeholder="Where are you today?" aria-label="userCity" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" id="search-btn" type=" button ">Button</button>
+            </div>
+        </div>
+
+
+        <div id="mainInfo" class="container invisible">
+            <div class="card text-center special-card " style="width: 15rem; ">
+                <div class="card-header">
+                    <img class="card-img-top " src="assets/images/food.png " alt="Card image cap ">
+                    <h5 class="card-title ">Where to Eat</h5>
+                </div>
+
+                <div class="card-body">
+
+                    <div class="card-text food-text"></div>
+
+                </div>
+            </div>
+            <div class="card text-center special-card " style="width: 15rem; ">
+                <div class="card-header">
+                    <img class="card-img-top" src="assets/images/cowork.png " alt="Card image cap ">
+                    <h5 class="card-title ">Co-Working</h5>
+                </div>
+                <div class="card-body">
+
+                    <p class="card-text coworker-text"></p>
+
+                </div>
+            </div>
+            <div class="card text-center special-card " style="width: 15rem; ">
+                <div class="card-header">
+                    <img class="card-img-top " src="assets/images/bike.png " alt="Card image cap ">
+                    <h5 class="card-title ">Bike Share</h5>
+                </div>
+
+                <div class="card-body ">
+
+                    <p class="card-text bike-text"></p>
+
+                </div>
+            </div>
+            <div class="card text-center special-card " style="width: 15rem; ">
+                <div class="card-header">
+
+                    <img class="card-img-top " src="assets/images/weather.png " alt="Card image cap ">
+                    <h5 class="card-title ">Local Weather</h5>
+                </div>
+
+                <div class="card-body ">
+
+                    <p class="card-text weather-text"></p>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <h3>My Google Maps Demo</h3>
+        <div id="map"></div>
+
+    </div>
+    <div id="places"></div>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0aEnbnxu2MNJUPLr4awR-qudKSjhAwCM&libraries=places">
+    </script>
+
+
+
+</body>
+
+</html>

@@ -2,61 +2,68 @@
 
 <html lang="en-us">
 
-  <head>
-      <meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
 
-      <title>Digital Nomads</title>
+    <title>Digital Nomads</title>
 
-      <!-- LINK TO CLEAR GOES HERE -->
+    <!-- LINK TO CLEAR GOES HERE -->
 
-      <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 
-      <!-- Bootstrap -->
+    <!-- Bootstrap -->
 
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 
-      <!-- LINK TO CSS GOES HERE -->
+    <!-- LINK TO CSS GOES HERE -->
 
-      <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
-      <!-- LINK TO JAVASCRIPT GOES HERE -->
+    <!-- LINK TO JAVASCRIPT GOES HERE -->
 
-      <script src="assets/javascript/app.js"></script>
 
-      <!-- LINK TO FIREBASE GOES HERE -->
+    <script src="assets/javascript/app.js"></script>
+    <script src="assets/javascript/goplacefood.js"></script>
 
-      <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
-  </head>
 
-  
-  <body>
 
-      <div id="logo">
-          <img id="logo" src="assets/images/NomadLogo.png"></img>
-      </div>    
+    <!-- LINK TO FIREBASE GOES HERE -->
 
-           <video id="videoID" autoplay loop src="assets/images/manhattan-sunset-from-brooklyn-bridge-park-video-id658919404.mp4">
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+</head>
+
+
+<body>
+
+    <div id="logo">
+        <img id="logo" src="assets/images/NomadLogo.png"></img>
+    </div>
+
+    <video id="videoID" autoplay loop src="assets/images/manhattan-sunset-from-brooklyn-bridge-park-video-id658919404.mp4">
            </video>
 
-    
-       <div class="container">
 
-           <h1 class="text-center">Welcome Nomad</h1>
+    <div class="container">
 
-              <div class="panel-body">
+        <h1 class="text-center">Welcome Nomad</h1>
 
-                   <div class="wrapper">
-                         <a class="nav-link" href="index2.html"><input placeholder=" Where are you today?">
-                         <button id="search-btn" class="btn"><span href="#" class="innerButton">Enter</span></button></a>
-                  </div>
-              </div>      
-       </div>
+        <div class="panel-body">
+
+            <div class="wrapper">
+                <a class="nav-link" href="index2.html"><input placeholder=" Where are you today?">
+                    <button id="search-btn" class="btn"><span href="#" class="innerButton">Enter</span></button></a>
+            </div>
+        </div>
+    </div>
+    <div id="map">
+
+    </div>
+    <div id="places"></div>
+    <script src="https://code.jquery.com/jquery.js">
+    </script>
 
 
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script type="text/javascript" src="employee.js"></script>
-
-  </body>
+</body>
 
 </html>

@@ -7,14 +7,13 @@
     <meta charset="UTF-8">
 
     <title>Digital Nomads</title>
-    <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 
     <!-- LINK TO CLEAR GOES HERE -->
 
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 
     <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
@@ -24,12 +23,22 @@
 
     <!-- LINK TO CSS GOES HERE -->
 
+
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
     <!-- LINK TO JAVASCRIPT GOES HERE -->
 
-    <script src="assets/javascript/app.js"></script>
+    <!-- GOOGLE PLACE API -->
+
+
+    <script src="assets/javascript/goplacefood.js"></script>
     <script src="assets/javascript/yel.js"></script>
+    <script src="assets/javascript/co-worker.js"></script>
+    <script src="assets/javascript/bikeApp.js"></script>
+    <script src="assets/javascript/weather.js"></script>
+
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+
 
     <!-- LINK TO FIREBASE GOES HERE -->
 
@@ -123,10 +132,17 @@
             </div>
         </div>
     </div>
+    <div id="map"></div>
+    <div id="right-panel">
+        <h2>Results</h2>
+        <ul id="places"></ul>
+        <button id="more">More results</button>
+    </div>
 
+    </div>
     <script src="https://code.jquery.com/jquery.js"></script>
-    <script type="text/javascript" src="assets/javascript/app.js"></script>
 
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
 
 </html>
