@@ -1,21 +1,28 @@
-$(document).ready(function() {
-  // This is our API key
-  var APIKey = "166a433c57516f51dfab1f7edaed8413";
-  var tempFahrenheit = "";
-  var tempCelsius = "";
-  var weatherDescription = "";
-  var weatherCategory = "";
-  var userCity = "fairfield";
+// This is our API key
+var APIKey = '166a433c57516f51dfab1f7edaed8413';
+var userCity = 'Sacramento';
+var tempFahrenheit = '';
+var tempCelsius = '';
+var weatherDescription = '';
+var weatherCategory = '';
 
-  // Here we are building the URL we need to query the database
-  var queryURL =
-    "https://api.openweathermap.org/data/2.5/weather?q=" +
-    userCity +
-    "&appid=" +
-    APIKey;
+// Here we are building the URL we need to query the database
+var queryURL =
+  'https://api.openweathermap.org/data/2.5/weather?' +
+  'q=' +
+  userCity +
+  '&appid=' +
+  APIKey;
 
-  //this fires the function for now until we put it into app.js and is fired on "submit"
-  weatherGo();
+// Here we run our AJAX call to the OpenWeatherMap API
+$.ajax({
+  url: queryURL,
+  method: 'GET'
+})
+  // We store all of the retrieved data inside of an object called "response"
+  .then(function(response) {
+    // Log the queryURL
+    console.log(queryURL);
 
   function weatherGo() {
     //Here we run our AJAX call to the OpenWeatherMap
@@ -32,9 +39,10 @@ $(document).ready(function() {
         console.log("Description: " + response.weather[0].main);
         console.log("Category: " + response.weather[0].description);
 
-        tempFahrenheit = Math.floor(response.main.temp * 9 / 5 - 459.67);
-        tempCelsius = Math.floor(response.main.temp - 273.15);
-        var weatherCategory = response.weather[0].description;
+    // Log the data in the console as well
+    console.log('Temperature (F): ' + response.main.temp);
+    console.log('Description: ' + response.weather[0].main);
+    console.log('Category: ' + response.weather[0].description);
 
         function capitalizeFirstLetter(weatherCategory) {
           return (
