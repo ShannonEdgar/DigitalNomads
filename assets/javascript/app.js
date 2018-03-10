@@ -1,29 +1,22 @@
 $(document).ready(function() {
+  var userCity = "";
   var div = $("<div>");
   var p = $("<p>");
-  var userCity = $("#userCity").val();
+  var map;
+  var service;
+  var infowindow;
 
-  $("#search-btn").on("click", function() {
-    userCity = $("input")
-      .val()
-      .trim();
-    $("#mainInfo").removeClass("invisible");
-    $("#mainInfo").css("visibility", "visible");
+  getCity();
+
+  callFood(userCity);
+  callCoWorkers(userCity);
+  callBike(userCity);
+  callWeather(userCity);
+
+  function getCity() {
+    userCity = localStorage.getItem("city");
     console.log(userCity);
-    callFood(userCity);
-    callCoWorkers(userCity);
-    callBike(userCity);
-    callWeather(userCity);
-
-    var map;
-    var service;
-    var infowindow;
-  });
-
-  window.addEventListener("load", function() {
-    console.log(localStorage);
-  });
-  var userCity;
+  }
 
   var config = {
     apiKey: "AIzaSyDYMiYaFsfVgiaaHVjIL5HRtgoRcrND9-E",
@@ -35,22 +28,6 @@ $(document).ready(function() {
   };
   firebase.initializeApp(config);
   var database = firebase.database();
-  // database.ref();
-  // firebase.auth().onAuthStateChanged(function(user) {
-  //   if (user) {
-  //     // User is signed in.
-  //     console.log(user);
-  //     firebaseUser = user;
-
-  //     // Try to read preferred city
-  //     database
-  //       .ref("/users/" + firebaseUser.uid)
-  //       .once("value")
-  //       .then(function(snapshot) {
-  //         userCity = snapshot.val().city;
-  //       });
-  //   }
-  // });
 
   function callFood() {
     var proxy = "https://cors-anywhere.herokuapp.com/";
@@ -193,7 +170,6 @@ $(document).ready(function() {
     var tempCelsius = "";
     var weatherDescription = "";
     var weatherCategory = "";
-    var userCity = "Sacramento";
 
     // Here we are building the URL we need to query the database
     var queryURL =
