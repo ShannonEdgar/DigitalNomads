@@ -160,3 +160,18 @@ li {
     border-bottom: 1px solid rgba(128, 128, 128, 0.317);
     margin-bottom: 0.3rem;
 }
+
+#geocomplete {
+    width: 200px
+}
+
+.map_canvas {
+    width: 600px;
+    height: 400px;
+    margin: 10px 20px 10px 0;
+}
+
+#multiple li {
+    cursor: pointer;
+    text-decoration: underline;
+}

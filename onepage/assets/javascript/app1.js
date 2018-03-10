@@ -21,32 +21,7 @@ $(document).ready(function() {
     });
 
 });
-var config = {
-    apiKey: 'AIzaSyDYMiYaFsfVgiaaHVjIL5HRtgoRcrND9-E',
-    authDomain: 'dignomads-ef4c8.firebaseapp.com',
-    databaseURL: 'https://dignomads-ef4c8.firebaseio.com',
-    projectId: 'dignomads-ef4c8',
-    storageBucket: '',
-    messagingSenderId: '74241661347',
-};
-firebase.initializeApp(config);
-var database = firebase.database();
-database.ref();
-firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-        // User is signed in.
-        console.log(user);
-        firebaseUser = user;
 
-        // Try to read preferred city
-        database
-            .ref('/users/' + firebaseUser.uid)
-            .once('value')
-            .then(function(snapshot) {
-                userCity = snapshot.val().city;
-            });
-    }
-});
 
 function callFood() {
     var proxy = "https://cors-anywhere.herokuapp.com/";
@@ -292,3 +267,31 @@ function createMarker(place) {
         infowindow.open(map, this);
     });
 }
+$(function() {
+    var options = {
+        map: '.map_canvas',
+    };
+
+    $('#geocomplete')
+        .geocomplete(options)
+        .bind('geocode:result', function(event, result) {
+            $.log('Result: ' + result.formatted_address);
+        })
+        .bind('geocode:error', function(event, status) {
+            $.log('ERROR: ' + status);
+        })
+        .bind('geocode:multiple', function(event, results) {
+            $.log('Multiple: ' + results.length + ' results found');
+        });
+
+    $('#find').click(function() {
+        $('#geocomplete').trigger('geocode');
+    });
+
+    $('#examples a').click(function() {
+        $('#geocomplete')
+            .val($(this).text())
+            .trigger('geocode');
+        return false;
+    });
+});

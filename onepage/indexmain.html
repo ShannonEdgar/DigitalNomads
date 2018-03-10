@@ -110,14 +110,26 @@
 
 
 
-        <h3>My Google Maps Demo</h3>
-        <div id="map"></div>
+        <form>
+            <input id="geocomplete" type="text" placeholder="Type in an address" size="90" />
+            <input id="find" type="button" value="find" />
+        </form>
+
+
+
+        <div class="map_canvas"></div>
+
+        <pre id="logger">Log:</pre>
 
     </div>
     <div id="places"></div>
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0aEnbnxu2MNJUPLr4awR-qudKSjhAwCM&libraries=places">
     </script>
+    <script src="assets/javascript/jquery.geocomplete.js"></script>
+    <script src="assets/javascript/logger.js"></script>
+
 
 
 
