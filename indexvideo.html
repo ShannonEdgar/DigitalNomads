@@ -13,11 +13,70 @@
 
     <!-- Bootstrap -->
 
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    
-      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
-      <!-- LINK TO CSS GOES HERE -->
+    <!-- LINK TO CSS GOES HERE -->
+
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <!-- LINK TO JAVASCRIPT GOES HERE -->
+
+    <script src="assets/javascript/app.js"></script>
+
+    <!-- LINK TO FIREBASE GOES HERE -->
+
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+</head>
+
+
+<body>
+
+
+    <div id="logo">
+        <img id="logo" src="assets/images/NomadLogo.png"></img>
+    </div>
+
+    <video id="videoID" autoplay loop src="assets/images/manhattan-sunset-from-brooklyn-bridge-park-video-id658919404.mp4">
+    </video>
+
+
+    <div class="container">
+
+        <h1 class="text-center">Welcome Nomad</h1>
+
+
+        <div class="panel-body">
+
+<!--             <div class="wrapper">
+                <a class="nav-link">
+                    <input placeholder=" Where are you today?">
+                    <button id="search-btn" class="btn">
+                        <span>Enter</span>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div> -->
+
+
+    <form action="index2.html">
+      <span id="input-name">
+        Your Name:<input id="your-city" type="text">
+        <input id="save-city" value="Save" type="submit">
+      </span>
+    </form>
+
+
+<script>
+      $("#save-city").on("click", function() {
+      var userCity = $("#your-city").val().trim();
+      localStorage.clear();
+      localStorage.setItem("city", userCity);
+      console.log(localStorage)
+}); </script>
 
     <!-- LINK TO CSS GOES HERE -->
 
@@ -45,11 +104,11 @@
     <video id="videoID" autoplay loop src="assets/images/manhattan-sunset-from-brooklyn-bridge-park-video-id658919404.mp4">
     </video>
 
-  
 
 
 
-  </body>
+<!-- 
+</body>
 
         <div class="panel-body">
 
@@ -61,7 +120,7 @@
             </div>
         </div>
     </div>
-
+ -->
 
     <!-- <script src="https://code.jquery.com/jquery.js"></script> -->
     <!-- <script type="text/javascript" src="employee.js"></script> -->

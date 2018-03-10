@@ -7,3 +7,10 @@ $(document).ready(function() {
     console.log(userCity);
   });
 });
+
+ window.addEventListener('load', function() {
+ console.log(localStorage)
+})
+
+
+      
