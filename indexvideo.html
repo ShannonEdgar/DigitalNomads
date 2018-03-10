@@ -53,79 +53,30 @@
     </div>
 
     <div class="container">
-
         <h1 class="text-center">Welcome Nomad</h1>
-
         <div class="panel-body">
 
-            <div class="wrapper">
-                <a class="nav-link" href="index2.html">
-                    <input placeholder=" Where are you today?">
-                    <button id="search-btn" class="btn">
-                        <span href="#" class="innerButton">Enter</span>
-                    </button>
-                </a>
-            </div>
-        </div>
-    </div>
 
 
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script type="text/javascript" src="employee.js"></script>
+            <form action="index2.html">
+                <span id="input-name">
+                    <input id="your-city" type="text">
+                    <input id="save-city" value="Save" type="submit">
+                </span>
+            </form>
+
+
+            <script>
+                $("#save-city").on("click", function () {
+                    var userCity = $("#your-city").val().trim();
+                    localStorage.clear();
+                    localStorage.setItem("city", userCity);
+                    // console.log(userCity);
+                });
+
+            </script>
+
 
 </body>
-
-<div class="container">
-    <h1 class="text-center">Welcome Nomad</h1>
-    <div class="panel-body">
-
-        <!--             <div class="wrapper">
-                <a class="nav-link">
-                    <input placeholder=" Where are you today?">
-                    <button id="search-btn" class="btn">
-                        <span>Enter</span>
-                    </button>
-                </a>
-            </div>
-        </div>
-    </div> -->
-
-
-        <form action="index2.html">
-            <span id="input-name">
-                <input id="your-city" type="text">
-                <input id="save-city" value="Save" type="submit">
-            </span>
-        </form>
-
-
-        <script>
-            $("#save-city").on("click", function () {
-                var userCity = $("#your-city").val().trim();
-                localStorage.clear();
-                localStorage.setItem("city", userCity);
-                // console.log(userCity);
-            });
-
-        </script>
-        <!-- 
-</body>
-
-        <div class="panel-body">
-
-            <div class="wrapper">
-                <input id="userCity" placeholder=" Where are you today?">
-                <a class="nav-link" href="index2.html">
-                    <button id="search-btn" class="btn">Enter</button>
-                </a>
-            </div>
-        </div>
-    </div>
- -->
-
-        <!-- <script src="https://code.jquery.com/jquery.js"></script> -->
-        <!-- <script type="text/javascript" src="employee.js"></script> -->
-
-        </body>
 
 </html>
