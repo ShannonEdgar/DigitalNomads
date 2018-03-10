@@ -24,29 +24,38 @@ $.ajax({
     // Log the queryURL
     console.log(queryURL);
 
-    // Log the resulting object
-    console.log(response);
+  function weatherGo() {
+    //Here we run our AJAX call to the OpenWeatherMap
+    $.ajax({
+      url: queryURL,
+      method: "GET",
+    })
+      // We store all of the retrieved data inside of an object called "response"
+      .then(function(response) {
+        // Log the queryURL
 
-    // Transfer content to HTML
-    //  $(".city").html("<h1>" + response.name + " Weather Details</h1>");
-    //  $(".wind").text("Wind Speed: " + response.wind.speed);
-    //  $(".humidity").text("Humidity: " + response.main.humidity);
-    //  $(".temp").text("Temperature (F) " + response.main.temp);
+        //Log the resulting object
+        console.log(response);
+        console.log("Description: " + response.weather[0].main);
+        console.log("Category: " + response.weather[0].description);
 
     // Log the data in the console as well
     console.log('Temperature (F): ' + response.main.temp);
     console.log('Description: ' + response.weather[0].main);
     console.log('Category: ' + response.weather[0].description);
 
-    tempFahrenheit = Math.floor(response.main.temp * 9 / 5 - 459.67);
-    tempCelsius = Math.floor(response.main.temp - 273.15);
-    var weatherCategory = response.weather[0].description;
+        function capitalizeFirstLetter(weatherCategory) {
+          return (
+            weatherCategory.charAt(0).toUpperCase() + weatherCategory.slice(1)
+          );
+        }
 
-    function capitalizeFirstLetter(weatherCategory) {
-      return weatherCategory.charAt(0).toUpperCase() + weatherCategory.slice(1);
-    }
-
-    console.log(tempFahrenheit);
-    console.log(tempCelsius);
-    console.log(capitalizeFirstLetter(weatherCategory));
-  });
+        console.log("Temp (F): " + tempFahrenheit);
+        console.log("Temp (C): " + tempCelsius);
+        //this is the description that will be tied to the icons
+        console.log(
+          capitalizeFirstLetter("Category (for the icons): " + weatherCategory)
+        );
+      });
+  }
+});
