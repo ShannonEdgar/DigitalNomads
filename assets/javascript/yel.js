@@ -10,7 +10,7 @@ console.log(qurl);
 
 
 $.ajax({
-    url: 'https://shielded-hamlet-43668.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=coworking+space&location=Sacramento',
+    url: 'https://shielded-hamlet-43668.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=restaurant&location=Sacramento&categories=restaurants,All',
     type: 'GET',
     headers: {
         'Authorization': 'Bearer _XHOfGt95IoxLfo2BdXxO5NC47aozRuVeDtWe_0kYXUkEfQwzL0McIpptuWt-7vhelkhk_APoDaRnmhHOP_h4s3trwNISuCoUYuPdSxJ1mp_vAo1HNv-wDcG-AabWnYx'

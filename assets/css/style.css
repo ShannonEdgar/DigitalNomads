@@ -1,5 +1,5 @@
-.container3 {
-    padding-top: 30px;
+.container3{
+  padding-top: 30px;
     margin: auto;
     width: 100%;
     max-width: 1100px;
@@ -9,64 +9,67 @@
     background-color: white;
     height: 900px;
     opacity: 0.76;
-}
+ }
 
-.container2 {
+.container2{
     margin: auto;
     width: 100%;
-    /*   background-color: #6C497C;*/
+ /*   background-color: #6C497C;*/
     max-width: 1900px;
     text-align: center;
     z-index: 20;
-    height: 10rem;
-}
+    height: 900px;
+ }
 
-.container {
+
+ .container{
     margin-top: 220px;
+ }
+
+ .col-lg-12{
+  color: #606060;
+ }
+
+ form {
+  margin: 0 auto;
+  width: 400px;
 }
 
-.col-lg-12 {
-    color: #606060;
+
+p{
+  font-size: 18px;
 }
 
-form {
-    margin: 0 auto;
-    width: 400px;
+h1{
+  font-size: 35px;
+  font-family:'helvetica', 'gotham', sans-serif;
 }
 
-p {
-    font-size: 18px;
+h3{
+  font-size: 24px;
+  text-align: center;
+  font-family: 'Raleway','helvetica', 'gotham', sans-serif;
+/*  color: #6C497C;*/
+  color: #303030;
 }
 
-h1 {
-    font-size: 35px;
-    font-family: 'helvetica', 'gotham', sans-serif;
+video{
+  position: relative;
+  min-width: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  position: fixed;
+  top: 55px;
 }
 
-h3 {
-    font-size: 24px;
-    text-align: center;
-    font-family: 'Raleway', 'helvetica', 'gotham', sans-serif;
-    /*  color: #6C497C;*/
-    color: #303030;
+body{
+  z-index: 5;
+  color: #303030;
+  font-family: 'helvetica', 'gotham', sans-serif;
 }
 
-video {
-    position: relative;
-    min-width: 100%;
-    max-width: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1;
-    position: fixed;
-    top: 55px;
-}
-
-body {
-    z-index: 5;
-    color: #303030;
-    font-family: 'helvetica', 'gotham', sans-serif;
-}
 
 input {
     float: center;
@@ -74,6 +77,7 @@ input {
     margin: auto;
     width: 100%;
 }
+
 
 button {
     position: absolute;
@@ -87,18 +91,18 @@ button {
     font-size: 10px;
 }
 
-.card-img-top {
-    width: 18rem;
-    width: 40px;
+.card-img-top{
+width: 18rem;
+width: 40px;
 }
 
-.card-body {
-    justify-content: center;
+.card-body{
+  justify-content: center;
 }
 
-.card {
-    display: inline-block;
-    margin: 30px;
+.card{
+  display: inline-block;
+  margin: 30px;
 }
 
 .wrapper {
@@ -107,89 +111,39 @@ button {
     margin: 0 auto;
 }
 
-.innerButton {
+.innerButton{
     position: relative;
     top: -3px;
 }
 
 #logo {
-    left: 50px;
-    top: 10px;
-    z-index: 15;
-    position: absolute;
-    max-width: 170px
+  left: 50px;
+  top: 10px;
+  z-index: 15;
+  position: absolute;
+  max-width: 170px
 }
 
 #header-image {
-    width: 100%;
+  width: 100%;
 }
 
-.list-group-item {
-    color: #989898;
-    font-family: 'helvetica', 'gotham', sans-serif;
-    border: none;
-    font-size: 15px;
+.list-group-item{
+  color: #989898;
+  font-family: 'helvetica', 'gotham', sans-serif;
+  border: none;
+  font-size: 15px;
 }
 
-.list-group-sub {
-    color: #989898;
-    font-family: 'helvetica', 'gotham', sans-serif;
-    border: none;
-    font-size: 10px;
-    text-decoration-style: bold;
+.list-group-sub{
+  color: #989898;
+  font-family: 'helvetica', 'gotham', sans-serif;
+  border: none;
+  font-size: 10px;
+  text-decoration-style: bold;
 }
 
-li {
-    margin: 0px 0;
+li{
+  margin: 0px 0;
 }
 
-.special-card {
-    /* create a custom class so you 
-   do not run into specificity issues 
-   against bootstraps styles
-   which tends to work better than using !important 
-   (future you will thank you later)*/
-    background-color: rgba(245, 245, 245, 1);
-    opacity: 0.6;
-    overflow: scroll;
-    height: 25rem;
-}
-
-.foodcont {
-    border-bottom: 1px solid rgba(128, 128, 128, 0.317);
-    margin-bottom: 0.3rem;
-}
-
-.coworkerscont {
-    border-bottom: 1px solid rgba(128, 128, 128, 0.317);
-    margin-bottom: 0.3rem;
-}
-
-.bikecont {
-    border-bottom: 1px solid rgba(128, 128, 128, 0.317);
-    margin-bottom: 0.3rem;
-}
-
-a {
-    color: #4183C4;
-    text-decoration: none;
-}
-
-#examples a {
-    text-decoration: underline;
-}
-
-#geocomplete {
-    width: 200px
-}
-
-.map_canvas {
-    width: 600px;
-    height: 400px;
-    margin: 10px 20px 10px 0;
-}
-
-#multiple li {
-    cursor: pointer;
-    text-decoration: underline;
-}
