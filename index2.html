@@ -39,67 +39,99 @@
 
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWzB5jMBONeG8GTNQixmSfV7u5tj4lEwo&libraries=places"></script>
 
+    <!-- LINK TO Brandon font -->
+
+    <link rel="stylesheet" href="https://use.typekit.net/ftz4ghe.css">
+
 </head>
 
+
 <body>
-    <div class="container2">
-        <img id="header-image" src="assets/images/header.png"></img>
+
+<div class="margin"> 
+    <div class="container2 gradient">
     </div>
 
 
+  
+        <div class="quote">
+            <div class="header">
+               <img id="logo2" src="assets/images/NomadLogoWhite.png"></img>
 
-
-    <div id="mainInfo" class="container">
-        <div class="card text-center special-card" style="width: 20rem; ">
-            <div class="card-header">
-                <img class="card-img-top " src="assets/images/food.png" alt="Card image cap">
-                <h5 class="card-title">Where to Eat</h5>
-            </div>
-
-            <div class="card-body">
-
-                <div class="card-text food-text"></div>
-
-            </div>
+                <div id="btn-new">
+                     <form action="index2.html">
+                         <span id="input-name" class="input-group-btn" style="width:0;">
+                         <input id="your-city" type="text" class="form-control" placeholder="Enter new city">
+                        <input id="save-city" value="Go" type="submit" class="btn">
+                        </span>
+                     </form>
+                </div>
         </div>
-        <div class="card text-center special-card " style="width: 20rem;">
-            <div class="card-header">
-                <img class="card-img-top" src="assets/images/cowork.png" alt="Card image cap">
-                <h5 class="card-title ">Co-Working</h5>
-            </div>
-            <div class="card-body">
 
-                <p class="card-text coworker-text"></p>
+    
+         <div id="current-city" class="font"></div>
 
-            </div>
+
         </div>
-        <div class="card text-center special-card " style="width: 20rem; ">
-            <div class="card-header">
-                <img class="card-img-top " src="assets/images/bike.png " alt="Card image cap ">
-                <h5 class="card-title ">Bike Share</h5>
+
+                <div id="mainInfo" class="container">
+                    <div class="card text-center special-card" style="width: 20rem; ">
+                        <div class="card-header">
+                            <!-- <img class="card-img-top " src="assets/images/food.png" alt="Card image cap"> -->
+                            <h5 class="card-title">Where to Eat</h5><br>
+                        </div>
+
+                        <div class="card-body">
+                            <div class="card-text food-text"></div>
+
+                        </div>
+                    </div>
+                    <div class="card text-center special-card" style="width: 20rem;">
+                        <div class="card-header">
+                            <!-- <img class="card-img-top" src="assets/images/cowork.png" alt="Card image cap"> -->
+                            <h5 class="card-title ">Co-Working</h5><br>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text coworker-text"></p>
+
+                        </div>
+                    </div>
+
+                    <div class="card text-center special-card" style="width: 20rem; ">
+                        <div class="card-header">
+                            <h5 class="card-title ">Bike Share</h5><br>
+                        </div>
+
+                        <div class="card-body ">
+                            <p class="card-text bike-text"></p>
+
+                        </div>
+                    </div>
+
+                    <div class="card text-center special-card" style="width: 20rem; ">
+                        <div class="card-header">
+                            <h5 class="card-title ">Weather Conditions</h5><br>
+                            <p id="display-weather"></p>
+                            <p id="display-weather-sm" class="card-text"></p>
+                            <img src="assets/images/light-rain.png" class="icon">
+                        </div>
+
+                        <div class="card-body ">
+                        </div>
+                    </div>
+
+
+            <div id="map-container">
+                <img id="map" src="assets/images/map.png"></img>        
             </div>
+   
 
-            <div class="card-body ">
+             <footer>
+                <div id="footertype">Copyright &copy; 2018 Nomad Nation
+                </div>
 
-                <p class="card-text bike-text"></p>
-
-            </div>
-        </div>
-        <div class="card text-center special-card " style="width: 20rem; ">
-            <div class="card-header">
-
-                <img class="card-img-top " src="assets/images/weather.png " alt="Card image cap ">
-                <h5 class="card-title ">Local Weather</h5>
-            </div>
-
-            <div class="card-body ">
-
-                <p class="card-text weather-text"></p>
-
-            </div>
-        </div>
-    </div>
-
+            </footer>
+ </div> 
 
     <script src="https://code.jquery.com/jquery.js"></script>
     <script type="text/javascript" src="assets/javascript/app.js"></script>

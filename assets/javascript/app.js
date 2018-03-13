@@ -50,6 +50,8 @@ $(document).ready(function() {
             });
     }
 
+    $("#current-city").text(userCity);
+
     function renderFood(response) {
         $(".food-text").empty();
         for (var i = 0; i < response.results.length; i++) {
@@ -68,13 +70,13 @@ $(document).ready(function() {
                 .html(response.results[i].formatted_address);
             var foodRating = $("<p>")
                 .addClass("food-rating")
-                .html("Rating: " + response.results[i].rating);
+                .html("Rating: " + response.results[i].rating + " ");
             var foodPrice = $("<p>")
-                .addClass("food-rating")
+                .addClass("food-price")
                 .html("Price: " + response.results[i].price_level);
+            foodCont.append(foodRating);
             foodCont.append(foodName);
             foodCont.append(foodAddress);
-            foodCont.append(foodRating);
             foodCont.append(foodPrice);
             $(".food-text").append(foodCont);
         }
@@ -143,14 +145,14 @@ $(document).ready(function() {
                 .addClass('coworkers-address')
                 .html(response.businesses[i].display_address);
             var coworkersRating = $('<p>')
-                .addClass('coworkers-rating')
-                .html("Rating: " + response.businesses[i].rating);
+                // .addClass('coworkers-rating')
+                .html("Rating: " + response.businesses[i].rating);                
             var coworkersPrice = $('<p>')
                 .addClass('coworkers-price')
                 .html("Price: " + response.businesses[i].price);
+            coworkersCont.append(coworkersRating);
             coworkersCont.append(coworkersName);
             coworkersCont.append(coworkersAddress);
-            coworkersCont.append(coworkersRating);
             coworkersCont.append(coworkersPrice);
             $(".coworker-text").append(coworkersCont);
         }
@@ -193,7 +195,7 @@ $(document).ready(function() {
                 .html("Rating: " + response.results[i].rating);
             bikeCont.append(bikeName);
             bikeCont.append(bikeAddress);
-            bikeCont.append(bikeRating);
+            // bikeCont.append(bikeRating);
             $(".bike-text").append(bikeCont);
         }
     }
@@ -265,6 +267,9 @@ $(document).ready(function() {
                 weatherCont.append(descr);
                 weatherCont.append(category);
                 $(".weather-text").append(weatherCont);
+                $("#display-weather").text("Current Temperature (F): " + tempFahrenheit + " " + " (C): "  + tempCelsius);
+                $("#display-weather-sm").text(response.weather[0].description);
+        
             });
     }
     var map;
