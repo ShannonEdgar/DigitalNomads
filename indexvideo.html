@@ -56,30 +56,26 @@
 
     <div class="container4">
         <h1 class="text-center font">WELCOME NOMAD</h1>
-        
 
 
-        <div class="input-group">
-            <form action="index2.html">
-                <span id="input-name" class="input-group-btn" style="width:0;">
-                    <input id="your-city" type="text" class="form-control" placeholder="Enter your city">
-                    <input id="save-city" value="Go" type="submit" class="btn">
-                </span>
-            </form>
+
+        <div class="input-wrapper">
+            <input id="your-city" type="text" placeholder="Enter your city">
+            <button id="save-city" class="btn">Go</button>
         </div>
+    </div>
 
 
 
 
+    <script>
+        $("#save-city").on("click", function () {
+            var userCity = $("#your-city").val().trim();
+            localStorage.clear();
+            localStorage.setItem("city", userCity);
+        });
 
-            <script>
-                $("#save-city").on("click", function () {
-                    var userCity = $("#your-city").val().trim();
-                    localStorage.clear();
-                    localStorage.setItem("city", userCity);
-                });
-
-            </script>
+    </script>
 
 
 </body>
