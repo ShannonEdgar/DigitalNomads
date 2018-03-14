@@ -317,7 +317,6 @@ $(document).ready(function() {
 
       //data: YourData,
     }).done(function(coworkersData) {
-      //console.log(coworkersData);
       renderCoWorkers(coworkersData);
     });
   }
@@ -326,7 +325,7 @@ $(document).ready(function() {
     $(".coworker-text").empty();
     for (var i = 0; i < response.businesses.length; i++) {
       var nameCoworkers = response.businesses[i].name;
-      var addressCoWorkers = response.businesses[i].display_address;
+      var addressCoWorkers = response.businesses[i].location.display_address;
       var ratingCoworkers = response.businesses[i].rating;
       var priceCoworkers = response.businesses[i].price;
       zip = response.businesses[i].location.zip_code;
@@ -336,11 +335,12 @@ $(document).ready(function() {
         .html(response.businesses[i].name);
       var coworkersAddress = $("<p>")
         .addClass("coworkers-address")
-        .html(response.businesses[i].display_address);
+        .html(addressCoWorkers);
       var coworkersRating = $("<p>")
         .addClass("coworkers-rating")
         .html("Rating: " + response.businesses[i].rating);
 
+      console.log(addressCoWorkers);
       coworkersCont.append(coworkersName);
       coworkersCont.append(coworkersAddress);
       coworkersCont.append(coworkersRating);
