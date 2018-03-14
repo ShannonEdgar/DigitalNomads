@@ -289,9 +289,10 @@ $(document).ready(function() {
       var foodPrice = $("<p>")
         .addClass("food-rating")
         .html("Price: " + response.results[i].price_level);
+
+      foodCont.append(foodRating);
       foodCont.append(foodName);
       foodCont.append(foodAddress);
-      foodCont.append(foodRating);
       foodCont.append(foodPrice);
       $(".food-text").append(foodCont);
     }
@@ -318,6 +319,7 @@ $(document).ready(function() {
       //data: YourData,
     }).done(function(coworkersData) {
       renderCoWorkers(coworkersData);
+      console.log(coworkersData);
     });
   }
 
@@ -325,7 +327,13 @@ $(document).ready(function() {
     $(".coworker-text").empty();
     for (var i = 0; i < response.businesses.length; i++) {
       var nameCoworkers = response.businesses[i].name;
-      var addressCoWorkers = response.businesses[i].location.display_address;
+      var addressCoWorkers = response.businesses[i].location.address1;
+      var addressCoWorkers2 = response.businesses[i].location.address2;
+      var addressCoWorkers3 = response.businesses[i].location.address3;
+      var addressCoWorkersCity = response.businesses[i].location.city;
+      var addressCoWorkersCountry = response.businesses[i].location.country;
+      var addressCoWorkersState = response.businesses[i].location.state;
+      var addressCoWorkerszip_code = response.businesses[i].location.zip_code;
       var ratingCoworkers = response.businesses[i].rating;
       var priceCoworkers = response.businesses[i].price;
       zip = response.businesses[i].location.zip_code;
@@ -335,15 +343,26 @@ $(document).ready(function() {
         .html(response.businesses[i].name);
       var coworkersAddress = $("<p>")
         .addClass("coworkers-address")
-        .html(addressCoWorkers);
+        .html(
+          addressCoWorkers +
+            " " +
+            addressCoWorkers2 +
+            " " +
+            addressCoWorkers3 +
+            " " +
+            addressCoWorkersCity +
+            " " +
+            addressCoWorkersState +
+            " " +
+            addressCoWorkerszip_code
+        );
       var coworkersRating = $("<p>")
         .addClass("coworkers-rating")
         .html("Rating: " + response.businesses[i].rating);
 
-      console.log(addressCoWorkers);
+      coworkersCont.append(coworkersRating);
       coworkersCont.append(coworkersName);
       coworkersCont.append(coworkersAddress);
-      coworkersCont.append(coworkersRating);
       $(".coworker-text").append(coworkersCont);
     }
     callWeather(userCity);
@@ -373,7 +392,7 @@ $(document).ready(function() {
     for (var i = 0; i < response.results.length; i++) {
       var nameBike = response.results[i].name;
       var addressBike = response.results[i].formatted_address;
-      var ratingBike = response.results[i].rating;
+
       var bikeCont = $("<div>").addClass("bikecont");
       var bikeName = $("<h3>")
         .addClass("bike-name")
@@ -381,12 +400,10 @@ $(document).ready(function() {
       var bikeAddress = $("<p>")
         .addClass("bike-address")
         .html(response.results[i].formatted_address);
-      var bikeRating = $("<p>")
-        .addClass("bike-rating")
-        .html("Rating: " + response.results[i].rating);
+
       bikeCont.append(bikeName);
       bikeCont.append(bikeAddress);
-      bikeCont.append(bikeRating);
+
       $(".bike-text").append(bikeCont);
     }
   }
