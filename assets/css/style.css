@@ -1,235 +1,48 @@
-.gradient {
-  background: linear-gradient(225deg, #41006c, #9b58c8, #c50192, #d7ad00);
-  background-size: 800% 800%;
-
-  -webkit-animation: gradient 30s ease infinite;
-  -moz-animation: gradient 30s ease infinite;
-  animation: gradient 30s ease infinite;
-
-  @-webkit-keyframes gradient {
-    0% {
-      background-position: 32% 0%;
-    }
-    50% {
-      background-position: 69% 100%;
-    }
-    100% {
-      background-position: 32% 0%;
-    }
-  }
-  @-moz-keyframes gradient {
-    0% {
-      background-position: 32% 0%;
-    }
-    50% {
-      background-position: 69% 100%;
-    }
-    100% {
-      background-position: 32% 0%;
-    }
-  }
-  @keyframes gradient {
-    0% {
-      background-position: 32% 0%;
-    }
-    50% {
-      background-position: 69% 100%;
-    }
-    100% {
-      background-position: 32% 0%;
-    }
-  }
-}
-
-#display-weather-sm {
-  margin-top: 10px;
-  text-align: center;
-  color: #989898;
-}
-
-.icon {
-  width: 55px;
-  margin-top: 45px;
-}
-
-#current-city {
-  color: white;
-  font-size: 80px;
-  opacity: 0.75;
-  font-weight: medium;
-  margin-top: 55px;
-  text-align: center;
-}
-
-#display-weather {
-  margin-top: 0px;
-  text-align: center;
-  font-size: 20px;
-  color: grey;
-  font-family: "helvetica", "gotham", sans-serif;
-  font-weight: lighter;
-  color: #989898;
-}
-
-.quote {
-  margin-top: 325px;
-  background-color: grey;
-  text-align: center;
-  margin: auto;
-  padding-top: 15px;
-  position: relative;
-  /*    background-image: url('../images/header.png');*/
-  opacity: 0.5;
-  width: 100%;
-  height: 300px;
-}
-
-#btn-new {
-  float: right;
-}
-
-.font {
-  color: white;
-  font-size: 30px;
-  opacity: 0.75;
-  font-weight: lighter;
-}
-
-.panel-body {
-  padding-left: 590px;
-  margin: 0 auto;
-}
-
-/* this is conflicting with the class above. have to check if this is affecting button on second page as well before modifying further */
-.btn {
-  height: 34px;
-  width: 75px;
-  background-color: #9966cc;
-  color: white;
-  margin: 0 auto;
-}
-
-#map-container {
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  background-color: darkgrey;
-}
-
-#map {
-  width: 65em;
-  padding: 25px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-
-.margin {
-  max-width: 100%;
-  margin: auto;
-  height: 100%;
-}
-
-#footertype {
-  background-color: #575757;
-  height: 55px;
-  text-align: right;
-  padding-right: 20px;
-  padding-top: 15px;
-  color: white;
-  font-size: 10px;
-}
-
-.container4 {
-  padding-top: 130px;
-}
-
 .container3 {
-  padding-top: 30px;
   margin: auto;
   width: 100%;
   text-align: center;
   z-index: 20;
-  height: 900px;
   background-color: white;
-  height: 900px;
   opacity: 0.76;
 }
 
 .container2 {
-  margin: auto;
-  width: 100%;
+  /*   background-color: #6C497C;*/
   text-align: center;
   z-index: 20;
-  height: 10px;
+  height: 10rem;
+  margin-bottom: 7rem;
 }
 
-.container {
-  margin-top: 0px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+#mainContainer {
+  margin-top: 2rem;
 }
 
 .col-lg-12 {
   color: #606060;
 }
 
-/* consider deleting later */
-/* form {
+form {
   margin: 0 auto;
   width: 400px;
-} */
+}
 
 p {
-  text-decoration-style: bold;
-  font-size: 10px;
-  margin: 0px;
-  padding-top: 6px;
-  padding-bottom: 3px;
-  text-align: left;
-}
-/*
-.food-rating {
-    text-decoration-style: bold; 
-    font-size: 10px;
-    margin: 0px;
-    padding-top: 6px;
-}*/
-
-.food-price {
-  font-size: 10px;
-  margin: 0px;
-  padding-top: 6px;
-}
-
-.coworkers-price {
-  font-size: 10px;
-  margin: 0px;
-  padding-bottom: 4px;
-}
-
-.bike-address {
-  padding-bottom: 7px;
-}
-
-.bike-name {
-  padding-top: 5px;
+  font-size: 0.7rem;
 }
 
 h1 {
-  font-size: 24px;
-  font-family: "helvetica", "gotham", sans-serif;
+  font-size: 1.5rem;
+  font-family: 'helvetica', 'gotham', sans-serif;
 }
 
 h3 {
-  font-size: 14px;
-  font-family: "helvetica", "gotham", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  font-family: 'Raleway', 'helvetica', 'gotham', sans-serif;
+  /*  color: #6C497C;*/
   color: #303030;
-  text-align: left;
-  margin: 0px;
-  padding-top: 2px;
-  padding-bottom: 0px;
 }
 
 video {
@@ -243,60 +56,19 @@ video {
   top: 55px;
 }
 
-h5 {
-  font-size: 15px;
-  font-weight: bold;
-}
-
 body {
   z-index: 5;
   color: #303030;
-  font-family: "helvetica", "gotham", sans-serif;
+  font-family: 'helvetica', 'gotham', sans-serif;
 }
 
 input {
-  float: center;
   box-sizing: border-box;
   margin: auto;
   width: 100%;
 }
 
-.input-wrapper {
-  width: 400px;
-  margin: 0px auto 0px auto;
-}
-
-#your-city {
-  width: 300px;
-  height: 32px;
-}
-
-#save-city {
-  display: inline;
-  width: 500px;
-}
-/* button {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 80px;
-    background-color: #303030;
-    border-color: #6C497C;
-    color: #D0D0D0;
-    height: 26px;
-    font-size: 10px;
-} */
-
-.food-address {
-  margin: 0;
-}
-
-.food-price {
-  padding-bottom: 10px;
-}
-
 .card-img-top {
-  margin-top: 25px;
   width: 18rem;
   width: 40px;
 }
@@ -307,8 +79,7 @@ input {
 
 .card {
   display: inline-block;
-  margin: 30px;
-  padding: 15px;
+  margin: 0.7rem;
 }
 
 .wrapper {
@@ -319,46 +90,48 @@ input {
 
 #logo {
   left: 50px;
-  top: 17px;
+  top: 10px;
   z-index: 15;
   position: absolute;
   max-width: 170px;
 }
 
-#logo2 {
-  left: -220px;
-  top: 7px;
-  z-index: 15;
-  position: relative;
-  max-width: 170px;
-}
-
 #header-image {
   width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+}
+
+.card-title {
+  color: #989898;
+  font-family: 'helvetica', 'gotham', sans-serif;
+  border: none;
+  font-size: 15px;
 }
 
 .list-group-sub {
   color: #989898;
-  font-family: "helvetica", "gotham", sans-serif;
+  font-family: 'helvetica', 'gotham', sans-serif;
   border: none;
   font-size: 10px;
   text-decoration-style: bold;
 }
 
-li {
-  margin: 0px 0;
+#map {
+  height: 40rem;
+  width: 100%;
+  /* Optional: Makes the sample page fill the window. */
 }
 
 .special-card {
-  /* create a custom class so you 
-   do not run into specificity issues 
-   against bootstraps styles
-   which tends to work better than using !important 
-   (future you will thank you later)*/
   background-color: rgba(245, 245, 245, 1);
   opacity: 0.6;
   overflow: scroll;
-  height: 40rem;
+  height: 25rem;
+}
+
+#mainInfo {
+  visibility: hidden;
 }
 
 .foodcont {
@@ -374,28 +147,4 @@ li {
 .bikecont {
   border-bottom: 1px solid rgba(128, 128, 128, 0.317);
   margin-bottom: 0.3rem;
-}
-
-a {
-  color: #4183c4;
-  text-decoration: none;
-}
-
-#examples a {
-  text-decoration: underline;
-}
-
-#geocomplete {
-  width: 200px;
-}
-
-.map_canvas {
-  width: 600px;
-  height: 400px;
-  margin: 10px 20px 10px 0;
-}
-
-#multiple li {
-  cursor: pointer;
-  text-decoration: underline;
 }
