@@ -341,14 +341,10 @@ function renderCoWorkers(response) {
     var coworkersRating = $("<p>")
       .addClass("coworkers-rating")
       .html("Rating: " + response.businesses[i].rating);
-    var coworkersPrice = $("<p>")
-      .addClass("coworkers-price")
-      .html("Price: " + response.businesses[i].price);
 
     coworkersCont.append(coworkersName);
     coworkersCont.append(coworkersAddress);
     coworkersCont.append(coworkersRating);
-    coworkersCont.append(coworkersPrice);
     $(".coworker-text").append(coworkersCont);
   }
 }
