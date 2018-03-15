@@ -44,8 +44,9 @@
 }
 
 .food-rating {
-    padding-top: 1px;
+    padding-top: 10px;
     padding-bottom: 0px;
+    margin-bottom: 2px;
     margin-left: 10px;
 }
 
