@@ -13,7 +13,8 @@
 
     <!-- Bootstrap -->
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 
     <!-- LINK TO CSS GOES HERE -->
@@ -31,7 +32,12 @@
     <!-- LINK TO FIREBASE GOES HERE -->
 
     <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWzB5jMBONeG8GTNQixmSfV7u5tj4lEwo&libraries=places"></script>
 
+
+    <!-- LINK TO Brandon font -->
+
+    <link rel="stylesheet" href="https://use.typekit.net/ftz4ghe.css"> 
 
 </head>
 
@@ -43,105 +49,85 @@
             <img id="logo" src="assets/images/NomadLogo.png" alt=""></img>
         </a>
     </nav>
-
+   <div class="row">
     <div class="container2"></div>
+
 
     <video id="videoID" autoplay loop src="assets/images/manhattan-sunset-from-brooklyn-bridge-park-video-id658919404.mp4">
     </video>
 
 
     <div class="container" id="mainContainer">
+       <div class="col-12-md">
 
         <div class="container" id="search-bar">
-            <h1 id="welcome" class="text-center">Welcome Nomad</h1>
 
+            <h1 id="welcome" class="text-center font">Welcome Nomad</h1>
+                <div id="pac-container" class="text-center">
 
-            <div id="pac-container">
-                <input id="userCity" type="text" placeholder="Enter a location" required>
-                <button class="btn btn-outline-secondary" id="search-btn" type=" button ">Button</button>
+                    <input id="userCity" type="text" placeholder="Enter a location" required>
+                    </form>
+
+                    <div id="button">
+                        <button class="btn btn-outline-secondary" id="search-btn" type=" button ">Go</button>
+                    </div>
+                </div>
             </div>
+        </div> 
+    </div> 
 
+
+        <div id="mainInfo" class="container invisible">
+            <div class="card text-center  " style="width: 15rem; ">
+                <div class="card-header">
+                    <img class="card-img-top " src="assets/images/food.png " alt="Card image cap ">
+                    <h5 class="card-title ">Where to Eat</h5>
+                </div>
+
+                <div class="card-body special-card">
+
+                    <div class="card-text food-text"></div>
+
+                </div>
+            </div>
+            <div class="card text-center" style="width: 15rem; ">
+                <div class="card-header">
+                    <img class="card-img-top" src="assets/images/cowork.png " alt="Card image cap ">
+                    <h5 class="card-title ">Co-Working</h5>
+                </div>
+                <div class="card-body special-card ">
+
+                    <p class="card-text coworker-text"></p>
+
+                </div>
+            </div>
+            <div class="card text-center" style="width: 15rem; ">
+                <div class="card-header">
+                    <img class="card-img-top " src="assets/images/bike.png " alt="Card image cap ">
+                    <h5 class="card-title ">Bike Share</h5>
+                </div>
+
+                <div class="card-body special-card  ">
+
+                    <p class="card-text bike-text"></p>
+
+                </div>
+            </div>
+            <div class="card text-center" style="width: 15rem; ">
+                <div class="card-header">
+
+                    <img class="card-img-top" src="assets/images/weather.png " alt="Card image cap ">
+                    <h5 class="card-title ">Local Weather</h5>
+                </div>
+
+                <div class="card-body special-card">
+
+                    <p class="card-text weather-text"></p>
+
+                </div>
+            </div>
         </div>
-    </div>
 
-
-    <div id="mainInfo" class="container invisible">
-        <div class="card text-center  " style="width: 15rem; ">
-            <div class="card-header">
-                <img class="card-img-top " src="assets/images/food.png " alt="Card image cap ">
-                <h5 class="card-title ">Where to Eat</h5>
-            </div>
-
-            <div class="card-body special-card">
-
-                <div class="card-text food-text"></div>
-
-            </div>
-        </div>
-        <div class="card text-center" style="width: 15rem; ">
-            <div class="card-header">
-                <img class="card-img-top" src="assets/images/cowork.png " alt="Card image cap ">
-                <h5 class="card-title ">Co-Working</h5>
-            </div>
-            <div class="card-body special-card ">
-
-                <p class="card-text coworker-text"></p>
-
-            </div>
-        </div>
-        <div class="card text-center" style="width: 15rem; ">
-            <div class="card-header">
-                <img class="card-img-top " src="assets/images/bike.png " alt="Card image cap ">
-                <h5 class="card-title ">Bike Share</h5>
-            </div>
-
-            <div class="card-body special-card  ">
-
-                <p class="card-text bike-text"></p>
-
-            </div>
-        </div>
-        <div class="card text-center" style="width: 15rem; ">
-            <div class="card-header">
-
-                <img class="card-img-top" src="assets/images/weather.png " alt="Card image cap ">
-                <h5 class="card-title ">Local Weather</h5>
-            </div>
-
-            <div class="card-body special-card">
-
-                <p class="card-text weather-text"></p>
-
-            </div>
-        </div>
-    </div>
-
-    </div>
-    <div style="display: none">
-        <div id="info-content">
-            <table>
-                <tr id="iw-url-row" class="iw_table_row">
-                    <td id="iw-icon" class="iw_table_icon"></td>
-                    <td id="iw-url"></td>
-                </tr>
-                <tr id="iw-address-row" class="iw_table_row">
-                    <td class="iw_attribute_name">Address:</td>
-                    <td id="iw-address"></td>
-                </tr>
-                <tr id="iw-phone-row" class="iw_table_row">
-                    <td class="iw_attribute_name">Telephone:</td>
-                    <td id="iw-phone"></td>
-                </tr>
-                <tr id="iw-rating-row" class="iw_table_row">
-                    <td class="iw_attribute_name">Rating:</td>
-                    <td id="iw-rating"></td>
-                </tr>
-                <tr id="iw-website-row" class="iw_table_row">
-                    <td class="iw_attribute_name">Website:</td>
-                    <td id="iw-website"></td>
-                </tr>
-            </table>
-        </div>
     </div>
     <div class="container invisible" id="map-container">
         <div id="map"></div>
@@ -150,8 +136,10 @@
 
     <script src="https://code.jquery.com/jquery.js"></script>
 
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0aEnbnxu2MNJUPLr4awR-qudKSjhAwCM&libraries=places&callback=initAutocomplete"
+        async defer></script>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0aEnbnxu2MNJUPLr4awR-qudKSjhAwCM&libraries=places&callback=initMap" <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
 
 
