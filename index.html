@@ -26,7 +26,9 @@
     <script src="assets/javascript/app.js"></script>
 
 
+    <!-- LINK TO Brandon font -->
 
+    <link rel="stylesheet" href="https://use.typekit.net/ftz4ghe.css">
 
     <!-- LINK TO FIREBASE GOES HERE -->
 
@@ -38,11 +40,13 @@
 
 <body>
     <!-- Just an image -->
-    <nav class="navbar navbar-light bg-light navbar-fixed-top" id="nav-bar">
-        <a class="navbar-brand" href="indexmain.html">
-            <img id="logo" src="assets/images/NomadLogo.png" alt=""></img>
-        </a>
-    </nav>
+    <div id="head-bar">
+        <nav class="navbar navbar-light bg-light navbar-fixed-top" id="nav-bar">
+            <a class="navbar-brand" href="indexmain.html">
+                <img id="logo" src="assets/images/NomadLogoWhite.png" alt=""></img>
+            </a>
+        </nav>
+    </div>
 
     <div class="container2"></div>
 
@@ -53,16 +57,16 @@
     <div class="container" id="mainContainer">
 
         <div class="container" id="search-bar">
-            <h1 id="welcome" class="text-center">Welcome Nomad</h1>
+            <h1 id="welcome" class="text-center font">Welcome Nomad</h1><br>
 
 
-            <div id="pac-container">
-                <input id="userCity" type="text" placeholder="Enter a location" required>
-                <button class="btn btn-outline-secondary" id="search-btn" type=" button ">Button</button>
+            <div id="pac-container text-center">
+                <input id="userCity" class="text-center" type="text" placeholder="Enter your location" required>
+                <button class="btn btn-outline-secondary" id="search-btn" type=" button ">Go</button>
             </div>
 
         </div>
-    </div>
+    </div><br><br>
 
 
     <div id="mainInfo" class="container invisible">
@@ -114,7 +118,7 @@
 
             </div>
         </div>
-    </div>
+    </div><br>
 
     </div>
     <div style="display: none">
@@ -145,13 +149,22 @@
     </div>
     <div class="container invisible" id="map-container">
         <div id="map"></div>
+
+        <footer>
+            <div id="footertype">Copyright &copy; 2018 Nomad Nation
+            </div>
+
+        </footer>
+
     </div>
+
 
 
     <script src="https://code.jquery.com/jquery.js"></script>
 
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0aEnbnxu2MNJUPLr4awR-qudKSjhAwCM&libraries=places&callback=initMap" <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0aEnbnxu2MNJUPLr4awR-qudKSjhAwCM&libraries=places&callback=initMap"</script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
 
 
