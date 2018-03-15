@@ -1,0 +1,189 @@
+#welcome {
+    padding-top: 125px;
+    font-size: 2.5em;
+}
+
+#userCity{
+  width: 60%;
+}
+
+.font {
+  color: white;
+  opacity: 0.75;
+  font-weight: lighter;
+}
+
+.food-price {
+  font-size: 10px;
+  margin: 0px;
+  padding-top: 6px;
+  padding-bottom: 10px;
+}
+
+.bike-address {
+  padding-bottom: 7px;
+}
+
+.food-address {
+  margin: 0;
+}
+
+
+.container3 {
+  margin: auto;
+  width: 100%;
+  z-index: 20;
+  background-color: white;
+  opacity: 0.76;
+}
+
+.container2 {
+  /*   background-color: #6C497C;*/
+  text-align: center;
+  z-index: 20;
+  height: 10rem;
+  margin-bottom: 7rem;
+}
+
+#mainContainer {
+  margin-top: 2rem;
+}
+
+.col-lg-12 {
+  color: #606060;
+}
+
+form {
+  margin: 0 auto;
+  width: 400px;
+}
+
+p {
+  font-size: 0.7rem;
+  text-decoration-style: bold;
+  margin: 0px;
+  padding-top: 6px;
+  padding-bottom: 3px;
+  text-align: left;
+}
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-family: 'helvetica', 'gotham', sans-serif;
+}
+
+h3 {
+  font-family: "helvetica", "gotham", sans-serif;
+  color: #303030;
+  text-align: left;
+  margin: 0px;
+  padding-top: 2px;
+  padding-bottom: 0px;
+  font-size: 1rem;
+}
+
+video {
+  position: relative;
+  min-width: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  position: fixed;
+  top: 55px;
+}
+
+body {
+  z-index: 5;
+  color: #303030;
+  font-family: 'helvetica', 'gotham', sans-serif;
+}
+
+input {
+  box-sizing: border-box;
+  margin: auto;
+  width: 100%;
+}
+
+.card-img-top {
+  width: 18rem;
+  width: 40px;
+  padding-bottom: 1rem;
+}
+
+.card-body {
+  justify-content: center;
+}
+
+.card {
+  display: inline-block;
+  margin: 0.7rem;
+}
+
+.wrapper {
+  position: relative;
+  width: 30%;
+  margin: 0 auto;
+}
+
+#logo {
+  left: 50px;
+  top: 15px;
+  z-index: 15;
+  position: absolute;
+  max-width: 170px;
+}
+
+#header-image {
+  width: 180%;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
+
+.card-title {
+  color: #989898;
+  font-family: 'helvetica', 'gotham', sans-serif;
+  border: none;
+  font-size: 15px;
+}
+
+.list-group-sub {
+  color: #989898;
+  font-family: 'helvetica', 'gotham', sans-serif;
+  border: none;
+  font-size: 10px;
+  text-decoration-style: bold;
+}
+
+#map {
+  height: 40rem;
+  width: 100%;
+  /* Optional: Makes the sample page fill the window. */
+}
+
+.special-card {
+  background-color: rgba(245, 245, 245, 1);
+  opacity: 0.6;
+  overflow: scroll;
+  height: 25rem;
+}
+
+#mainInfo {
+  visibility: hidden;
+}
+
+.foodcont {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.317);
+  margin-bottom: 0.3rem;
+}
+
+.coworkerscont {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.317);
+  margin-bottom: 0.3rem;
+}
+
+.bikecont {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.317);
+  margin-bottom: 0.3rem;
+}
