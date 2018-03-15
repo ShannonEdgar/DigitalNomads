@@ -240,6 +240,16 @@ $(document).ready(function() {
     //}
     //}
     //});
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyDYMiYaFsfVgiaaHVjIL5HRtgoRcrND9-E",
+        authDomain: "dignomads-ef4c8.firebaseapp.com",
+        databaseURL: "https://dignomads-ef4c8.firebaseio.com",
+        projectId: "dignomads-ef4c8",
+        storageBucket: "dignomads-ef4c8.appspot.com",
+        messagingSenderId: "74241661347"
+    };
+    firebase.initializeApp(config);
     $("#userCity").keyup(function(event) {
         if ($(this).val() == "" || $(this).val() == " " || $(this).val() == "  ") {
             event.preventDefault();
